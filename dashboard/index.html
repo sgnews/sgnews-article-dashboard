@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="shortcut icon" type="image/png" href="/assets/img/logo.png">
+    <title>Dashboard | SGNews</title>
+</head>
+<body onload="onloadCookies()" class="navtop">
+    <nav class="account">
+        <a href="/" class="btn two left">Home</a>
+        <div class="dropdown">
+            <button class="dropbtn two" id="profilebtn" onclick="openProfileMenu()" title="Account">
+                <img id="profilepic" class="icon profile" style="opacity:0;">
+            </button>
+            <div id="myDropdown" class="dropdown-content">
+                <span class="loggedin">
+                    <a class="btn two" href="/account/profile/">Dein Profil</a>
+                    <button onclick="logout()">Logout</button>
+                </span>
+                <span class="notloggedin">
+                    <a class="btn two" href="/account/">Login</a>
+                </span>
+            </div>
+            </div>
+    </nav>
+    <ul class="urllist">
+        <a href="article-designer/?id=new">
+            <li class="btn">
+                <img src="/assets/img/add.svg">
+                <h2>New Article</h2>
+            </li>
+        </a>
+        <a href="article-designer/?id=495">
+            <li class="btn white">
+                <img src="/assets/img/logo.png">
+                <h2>Auf Spurensuche in der Gedenkstätte Bergen-Belsen</h2>
+                <p>by Svenja Dietzler | George Romhein, Jonathan Kloft</p>
+                <p class="status online left"><a href="https://www.stadtgymnasium-detmold.de/details/auf-spurensuche-in-der-gedenkstaette-bergen-belsen.html" target="_blank">
+                    online
+                    <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Open published Article</title><path d="M224 304a16 16 0 01-11.31-27.31l157.94-157.94A55.7 55.7 0 00344 112H104a56.06 56.06 0 00-56 56v240a56.06 56.06 0 0056 56h240a56.06 56.06 0 0056-56V168a55.7 55.7 0 00-6.75-26.63L235.31 299.31A15.92 15.92 0 01224 304z"/><path d="M448 48H336a16 16 0 000 32h73.37l-38.74 38.75a56.35 56.35 0 0122.62 22.62L432 102.63V176a16 16 0 0032 0V64a16 16 0 00-16-16z"/></svg>
+                </a></p>
+                <p class="right">22.02.2022</p>
+            </li>
+        </a>
+        <a href="article-designer/?id=123">
+            <li class="btn white">
+                <img src="/assets/img/logo.png">
+                <h2>The best of teachers - 2022</h2>
+                <p>by George Romhein | Petra Schmiedeskamp, Svenja Dietzler</p>
+                <p class="status offline left">offline</p>
+                <p class="right">02.02.2022</p>
+            </li>
+        </a>
+    </ul>
+<div id="snackbar"></div>
+</body>
+<script src="/assets/js/scripts.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-storage.js"></script>
+<script src="/assets/js/account/info.js"></script>
+<script src="/assets/js/account/accountpage.js"></script>
+<script src="/assets/js/account/dashboard.js"></script>
+</html>

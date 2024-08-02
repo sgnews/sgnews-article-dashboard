@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="shortcut icon" type="image/png" href="/assets/img/logo.png">
+    <title>Account - Login | SGNews</title>
+</head>
+<body onload="onloadCookies()">
+    <nav class="floatingback">
+        <button class="two" onclick="window.history.back()">Zurück</button>
+    </nav>
+    <header>
+        <div>
+            <iframe src="/assets/img/logo.svg"></iframe>
+            <h1>Login</h1>
+            <form action="javascript:login()">
+                <p><input type="text" placeholder="Name..." id="myname"></p>
+                <p><input type="email" placeholder="Email..." inputmode="email" id="email"></p>
+                <p><input type="password" placeholder="Passwort..." id="password"></p>
+                <button onclick="register()">register</button>
+            </form>
+        </div>
+    </header>
+    <div id="snackbar"></div>
+</body>
+<script src="/assets/js/scripts.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+<script src="/assets/js/account/info.js"></script>
+<script src="register.js"></script>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="shortcut icon" type="image/png" href="/assets/img/logo.png">
+    <title>Article Designer | SGNews</title>
+</head>
+<body onload="onloadCookies()" class="navtop">
+    <div class="bg">
+        <div class="upload">
+            <a href="/account/">Login</a>
+            <h2>Upload Article</h2>
+            <form>
+                <p><input type="text" placeholder="Title..." required></p>
+                <p><input type="url" placeholder="URL..." required disabled></p>
+                <button type="submit">Upload</button>
+            </form>
+        </div>
+    </div>
+    <nav>
+        <button onclick="history.back();" class="two" title="Zurück">
+            <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M244 400L100 256l144-144M120 256h292"/></svg>
+        </button>
+        <input type="text" placeholder="Title..." id="title">
+        <button onclick="saveTxt()" title="Save">
+            <svg xmlns="http://www.w3.org/2000/svg" class="ionicon light" viewBox="0 0 512 512"><path d="M465.94 119.76l-73.7-73.7A47.68 47.68 0 00358.3 32H96a64 64 0 00-64 64v320a64 64 0 0064 64h320a64 64 0 0064-64V153.7a47.68 47.68 0 00-14.06-33.94zM120 112h176a8 8 0 018 8v48a8 8 0 01-8 8H120a8 8 0 01-8-8v-48a8 8 0 018-8zm139.75 319.91a80 80 0 1176.16-76.16 80.06 80.06 0 01-76.16 76.16z"/><circle cx="256" cy="352" r="48"/></svg>
+        </button>
+        <button class="two" onclick="saveTxt()" title="Download as .HTML">
+            <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path d="M465.94 119.76l-73.7-73.7A47.68 47.68 0 00358.3 32H96a64 64 0 00-64 64v320a64 64 0 0064 64h320a64 64 0 0064-64V153.7a47.68 47.68 0 00-14.06-33.94zM120 112h176a8 8 0 018 8v48a8 8 0 01-8 8H120a8 8 0 01-8-8v-48a8 8 0 018-8zm139.75 319.91a80 80 0 1176.16-76.16 80.06 80.06 0 01-76.16 76.16z"/><circle cx="256" cy="352" r="48"/></svg>
+        </button>
+        <input type="file" name="inputFile" id="inputFile" accept="text/html" hidden>
+        <label for="inputFile" class="btn two" title="open .HTML">
+            <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path d="M408 96H252.11a23.89 23.89 0 01-13.31-4L211 73.41A55.77 55.77 0 00179.89 64H104a56.06 56.06 0 00-56 56v24h416c0-30.88-25.12-48-56-48zM423.75 448H88.25a56 56 0 01-55.93-55.15L16.18 228.11v-.28A48 48 0 0164 176h384.1a48 48 0 0147.8 51.83v.28l-16.22 164.74A56 56 0 01423.75 448zm56.15-221.45z"/></svg>
+        </label>
+        <button class="two" onclick="tinymce.activeEditor.execCommand('mceprint');" title="print">
+            <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path d="M408 112H106a58 58 0 00-58 58v158a56 56 0 0056 56h8v39.68A40.32 40.32 0 00152.32 464h207.36A40.32 40.32 0 00400 423.68V384h8a56 56 0 0056-56V168a56 56 0 00-56-56zm-40 311.68a8.35 8.35 0 01-8.32 8.32H152.32a8.35 8.35 0 01-8.32-8.32V264.32a8.35 8.35 0 018.32-8.32h207.36a8.35 8.35 0 018.32 8.32zm26-215.76a24 24 0 1122-22 24 24 0 01-22 22zM344 48H168a56.09 56.09 0 00-55.42 48h286.84A56.09 56.09 0 00344 48z"/></svg>
+        </button>
+        <button onclick="openUploadRequest()">Upload Article</button>
+    </nav>
+    <textarea id="editor"></textarea>
+</body>
+<script src="/assets/js/scripts.js"></script>
+<script src="/assets/js/tinymce-v.5.10.3/tinymce.min.js"></script>
+<script src="/assets/js/jquerymin-3.6.0.js"></script>
+<script src="/assets/js/editor.js"></script>
+</html>

@@ -1,0 +1,35 @@
+img.icon.profile{
+    width: 200px;
+    height: 200px;
+    border-radius: 2000px;
+}
+
+label.btn.two:hover{
+    background-color: transparent;
+}
+
+label.btn.two img{
+    outline: 3px solid transparent;
+}
+
+label.btn.two:hover img{
+    outline: 3px solid #000;
+}
+
+header ul li{
+    display: inline-block;
+    width: 30vw;
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+
+
+.deleteImgButton{
+    display: none;
+}
+
+.profileImg .deleteImgButton{
+    display: block;
+}

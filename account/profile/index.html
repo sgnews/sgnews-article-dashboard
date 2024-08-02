@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/profile.css">
+    <link rel="shortcut icon" type="image/png" href="/assets/img/logo.png">
+    <title>Account - Profil | SGNews</title>
+</head>
+<body onload="onloadCookies()">
+    <nav>
+        <a href="/dashboard/" class="btn">Dashboard</a>
+        <button onclick="logout()" class="two right">Logout</button>
+    </nav>
+    <header>
+        <div>
+            <ul>
+                <li>
+                    <label class="btn two">
+                        <input type="file" id="imageupload" onchange="chooseProfileImage(event)" hidden accept="image/jpeg" >
+                        <img id="profilepic" class="icon profile" style="opacity:0;">
+                    </label>
+                    <br><a onclick="deletePic()" class="deleteImgButton">delete picture</a>
+                </li>
+                <li>
+                    <h1>Profile</h1>
+                    <p><input type="text" name="name" id="displayName" placeholder="Name..."></p>
+                    <p><input type="email" name="email" id="displayMail" placeholder="Email..." disabled></p>
+                    <p><button class="two" onclick="newPassword()">change Password</button></p>
+                    <p><button onclick="uploadProfile()">Save</button></p>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <div id="snackbar"></div>
+</body>
+<script src="/assets/js/scripts.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-storage.js"></script>
+<script src="/assets/js/account/info.js"></script>
+<script src="/assets/js/account/accountpage.js"></script>
+<script src="/assets/js/account/profile.js"></script>
+</html>

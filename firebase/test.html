@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <title>Firebase Tests | SGNews</title>
+</head>
+<body>
+    <header>
+        <div id="login_view">
+            <h1>Login</h1>
+            <form action="javascript:login()">
+                <p><input type="email" id="email" placeholder="Email"></p>
+                <p><input type="password" id="password" placeholder="New Password"></p>
+                <button onclick="login()">Login</button>
+            </form>
+        </div>
+        <div id="loggedin_view" style="display: none;">
+            <h1>You're logged in!</h1>
+            <button onclick="signOut()">Logout</button>
+        </div>
+    </header>
+    <div id="snackbar"></div>
+</body>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+    <script src="scripts.js"></script>
+    <script src="login.js"></script>
+</html>
